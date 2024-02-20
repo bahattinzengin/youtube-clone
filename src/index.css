@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(15, 15, 15);
+  overflow-x: hidden;
+}
+
+.videos {
+
+  width: 100%;
+  display: grid;
+  gap: 50px;
+
+  grid-template-columns: repeat(auto-fit, minMax(200px, 300px));
+
+
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 100vh;
+  overflow: auto;
+
+}
+
+.videos::-webkit-scrollbar{
+background: black;
+width: 9px;
+
+
+}
+
+.videos::-webkit-scrollbar-thumb{
+
+  background: rgb(43, 40, 40);
+  border-radius: 10px;
+}
+
+.videos::-webkit-scrollbar-thumb:hover{
+  background:rgb(65, 59, 59) ;
+
+}
+
+
+@media (max-width :768px) {
+  .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    gap: 50px;
+    padding: 20px;
+  }
+}
+
+.sidebar{
+
+  height: 100vh;
+
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar{
+  background: black;
+width: 9px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  background: rgb(43, 40, 40);
+  border-radius: 10px;
+ 
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover{
+
+background:rgb(65, 59, 59) ;
+
+}
+
+
+.row {
+  display: grid;
+  grid-template-columns: 169px auto;
+  gap: 10px;
+}
